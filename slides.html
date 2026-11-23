@@ -26,6 +26,25 @@
     background: transparent;
     object-fit: fill;
   }
+
+  .reveal .slides section { position: relative; }
+  a.repo {
+    position: absolute;
+    left: 129px;
+    top: 761px;
+    width: 504px;
+    height: 78px;
+    z-index: 5;
+    display: block;
+    color: transparent;
+    font-size: 20px;
+    line-height: 78px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  a.repo:hover, a.repo:focus { outline: 3px solid #e3c6d6; outline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -709,7 +728,7 @@ c8KLiSwMftZ1Hf8BXt356dY8W48zZ72c+oxMFYDio6ekRaWllgyVjniVdkmixlSa1JJDj/jxXUyHPxhH
 4RCBfQ2Td9jL7oK4AAAk0bNzw/wyV+4qq7Jqg53wAAAEL4xncbNQTobEVYPRkpfF7TKVcgBMpDM/0t7P
 O7APSwsoQfOF6HGcdeMdc7GBSD5QhBbNbyjrnYwKQgvg1pjZw5C+DWk4KRTODl6J5EwTIStaYWJi9ymc
 G8fF8Dz7qD53FXBhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></section>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="><a class="repo" href="https://github.com/rgray601/call-time">https://github.com/rgray601/call-time</a></section>
 <section><img alt="Slide 2" src="data:image/webp;base64,
 UklGRqwmAQBXRUJQVlA4IKAmAQCwkQWdASqABzgEPpFIn0wlpCMwIhOZYgASCWlu+/+tIbWKCh5tGeba
 VJSANm6Trv99/i/TH5b8fw/9w/Ku6T893++9aH6x9gDx3fWH+3/qD/dH1UP93+63uk/sP/K9hH+q+lx6
@@ -12085,6 +12104,7 @@ w2QoAAADUqoD/eWTLGvjCwXnfY7HilYrS8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></section>
     keyboard: true
   });
   document.querySelector(".reveal").addEventListener("click", function (event) {
+    if (event.target.closest("a")) return;
     var half = window.innerWidth / 2;
     if (event.clientX < half) Reveal.prev();
     else Reveal.next();
