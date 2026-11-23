@@ -1,0 +1,122 @@
+[
+  {
+    "id": "onstage-title-01",
+    "format": "onstage",
+    "lane": "title",
+    "seconds": 25,
+    "text": "Why should the judges hand you this title tonight?",
+    "listen_for": "A job, not a wish. Someone she has already served. One action a judge could check later."
+  },
+  {
+    "id": "onstage-platform-01",
+    "format": "onstage",
+    "lane": "platform",
+    "seconds": 25,
+    "text": "In one breath, who is your platform for, and what have you already done for them?",
+    "listen_for": "A specific person, not a category. A thing she has done, not a thing she hopes to do."
+  },
+  {
+    "id": "onstage-personal-01",
+    "format": "onstage",
+    "lane": "personal",
+    "seconds": 25,
+    "text": "Tell us about a time you failed, and what you did the next morning.",
+    "listen_for": "A real failure, a concrete next step, no performance of humility."
+  },
+  {
+    "id": "onstage-hypothetical-01",
+    "format": "onstage",
+    "lane": "hypothetical",
+    "seconds": 25,
+    "text": "A sponsor asks you to promote a product you do not use. What do you say in the meeting?",
+    "listen_for": "A clear no or a clear condition, said with manners. No lecture."
+  },
+  {
+    "id": "onstage-current-01",
+    "format": "onstage",
+    "lane": "current",
+    "seconds": 25,
+    "text": "What is one story in the news you cannot stop thinking about, and why does it matter here?",
+    "listen_for": "One fact, one stake, one opinion. If she has no story, she should say so rather than invent one."
+  },
+  {
+    "id": "final-title-01",
+    "format": "final",
+    "lane": "title",
+    "seconds": 30,
+    "text": "If you win tonight, what is the first promise you make, and to whom?",
+    "listen_for": "One promise, one person, a way someone could tell if she kept it."
+  },
+  {
+    "id": "final-platform-01",
+    "format": "final",
+    "lane": "platform",
+    "seconds": 30,
+    "text": "What should this state understand about the people your platform serves that it does not understand now?",
+    "listen_for": "A correction of a misconception, grounded in someone she knows, not a slogan."
+  },
+  {
+    "id": "final-personal-01",
+    "format": "final",
+    "lane": "personal",
+    "seconds": 30,
+    "text": "What will you refuse to become, even with a crown on?",
+    "listen_for": "A boundary with an example. Not a list of virtues."
+  },
+  {
+    "id": "final-hypothetical-01",
+    "format": "final",
+    "lane": "hypothetical",
+    "seconds": 30,
+    "text": "You have thirty seconds and a room that disagrees with you. How do you spend the time?",
+    "listen_for": "Respect for the room, one reason, no pile of statistics she does not have."
+  },
+  {
+    "id": "final-current-01",
+    "format": "final",
+    "lane": "current",
+    "seconds": 30,
+    "text": "What is a hard question a titleholder should be willing to answer in public this month?",
+    "listen_for": "She names the question and takes a position. She does not hide inside the question itself."
+  },
+  {
+    "id": "private-title-01",
+    "format": "private",
+    "lane": "title",
+    "seconds": 90,
+    "text": "This title is a job. What part of the job scares you, and how have you practiced for that part?",
+    "listen_for": "A specific fear and a specific rehearsal. Charm with no practice is a weak answer."
+  },
+  {
+    "id": "private-platform-01",
+    "format": "private",
+    "lane": "platform",
+    "seconds": 90,
+    "text": "Walk us through your platform as if we have never heard of it. Who is it for, what have you done, and what will the title let you do that you cannot do now?",
+    "listen_for": "Three beats, in order. The title has to change her access, not just her caption."
+  },
+  {
+    "id": "private-personal-01",
+    "format": "private",
+    "lane": "personal",
+    "seconds": 90,
+    "text": "Where in your application did you hold something back, and why?",
+    "listen_for": "Honesty without a confession for its own sake. A reason a judge can respect."
+  },
+  {
+    "id": "private-hypothetical-01",
+    "format": "private",
+    "lane": "hypothetical",
+    "seconds": 90,
+    "text": "A judge disagrees with you on a controversial issue and will not let it go. Walk us through the next two minutes of that conversation.",
+    "listen_for": "She stays in the room. She does not surrender the point and she does not scold the judge."
+  },
+  {
+    "id": "private-current-01",
+    "format": "private",
+    "lane": "current",
+    "seconds": 90,
+    "text": "Pick a news story from this week. What do you actually know about it, what do you not know, and what is your position anyway?",
+    "listen_for": "A fact, a limit, and a position. Pretending to be a briefing book is worse than a clean 'I don't know yet.'"
+  }
+]

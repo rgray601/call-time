@@ -1,0 +1,546 @@
+{
+  "measured_at": "2026-11-23 19:59 UTC",
+  "model": "gpt-6-luna",
+  "prices_per_million": {
+    "input": 0.1,
+    "output": 0.5,
+    "cache_read": 0.01,
+    "cache_write": 0.125
+  },
+  "sample_question_id": "onstage-title-01",
+  "runs": {
+    "interview_cold": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.000894,
+      "usage": {
+        "requests": 4,
+        "input_tokens": 9561,
+        "output_tokens": 400,
+        "cache_read_tokens": 4247,
+        "cache_write_tokens": 4810,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.000894,
+      "agents": [
+        {
+          "name": "Interview Coach",
+          "usd": 0.00048,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 5022,
+            "output_tokens": 243,
+            "cache_read_tokens": 2284,
+            "cache_write_tokens": 2486,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "get_question",
+            "timing_check",
+            "filler_count",
+            "final_result"
+          ]
+        },
+        {
+          "name": "Director",
+          "usd": 0.000414,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 4539,
+            "output_tokens": 157,
+            "cache_read_tokens": 1963,
+            "cache_write_tokens": 2324,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "grounding_check",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": {
+        "content": 8,
+        "structure": 7,
+        "authenticity": 8,
+        "timing": 4,
+        "overall": 6
+      },
+      "overall": null,
+      "judges_note": "The clock caught you at 31 seconds on a 25-second question. Your three years tutoring girls who could not pay for a coach is concrete proof, and publishing the dates gives judges something to check. Try: \u201cI should receive this title because I have spent three years tutoring girls who could not pay for a coach. I would use it to bring tutoring to two towns without a prep class and publish the dates so people can hold me to it.\u201d Tonight, time that answer twice; keep the published-dates line intact and cut any extra word that pushes it over 25 seconds.",
+      "tighter_answer": "I should receive this title because I have spent three years tutoring girls who could not pay for a coach. I would use it to bring tutoring to two towns without a prep class and publish the dates so people can hold me to it.",
+      "drill": "Time the tighter answer twice, starting with \u201cI should receive this title\u201d; keep the published-dates line intact and cut any extra word that pushes it over 25 seconds.",
+      "reviewed": true,
+      "released": true,
+      "auditor_passed": null,
+      "questions": [],
+      "grades": null,
+      "audit": {
+        "problems": [],
+        "hold": false,
+        "tighter_words": 45,
+        "tighter_cap": 60,
+        "tighter_over_cap": false,
+        "timing": {
+          "words": 76,
+          "seconds_used": 31.0,
+          "seconds_limit": 25,
+          "over_by": 6.0,
+          "source": "clock",
+          "estimate_seconds": 33.0
+        },
+        "tools_note": "Scores belong to the interview coach. Do not rescore."
+      },
+      "manual": "full",
+      "practice_set": null,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The interview coach is at the table.",
+        "The director is reading the note."
+      ]
+    },
+    "interview_warm": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.000359,
+      "usage": {
+        "requests": 4,
+        "input_tokens": 9566,
+        "output_tokens": 351,
+        "cache_read_tokens": 8696,
+        "cache_write_tokens": 366,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.000359,
+      "agents": [
+        {
+          "name": "Interview Coach",
+          "usd": 0.000197,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 5022,
+            "output_tokens": 248,
+            "cache_read_tokens": 4770,
+            "cache_write_tokens": 0,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "get_question",
+            "timing_check",
+            "filler_count",
+            "final_result"
+          ]
+        },
+        {
+          "name": "Director",
+          "usd": 0.000162,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 4544,
+            "output_tokens": 103,
+            "cache_read_tokens": 3926,
+            "cache_write_tokens": 366,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "grounding_check",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": {
+        "content": 8,
+        "structure": 7,
+        "authenticity": 8,
+        "timing": 4,
+        "overall": 6
+      },
+      "overall": null,
+      "judges_note": "Your strongest material is the three years of tutoring girls who could not pay for a coach and the checkable promise to publish dates. The clock caught the original at 31 seconds, six over. Use the tighter version, then time it twice tonight; keep \u201cI would publish the dates\u201d clear and unhurried.",
+      "tighter_answer": "For three years, I tutored girls who could not pay for a coach in a library after school. With this title, I can bring that tutoring to two towns that have never had a prep class. I would publish the dates so people can hold me to the work.",
+      "drill": "Time this 43-word version twice at a controlled pace; keep the final line, \u201cI would publish the dates,\u201d clear and unhurried.",
+      "reviewed": true,
+      "released": true,
+      "auditor_passed": null,
+      "questions": [],
+      "grades": null,
+      "audit": {
+        "problems": [],
+        "hold": false,
+        "tighter_words": 49,
+        "tighter_cap": 60,
+        "tighter_over_cap": false,
+        "timing": {
+          "words": 76,
+          "seconds_used": 31.0,
+          "seconds_limit": 25,
+          "over_by": 6.0,
+          "source": "clock",
+          "estimate_seconds": 33.0
+        },
+        "tools_note": "Scores belong to the interview coach. Do not rescore."
+      },
+      "manual": "full",
+      "practice_set": null,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The interview coach is at the table.",
+        "The director is reading the note."
+      ]
+    },
+    "interview_short": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.000296,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 1688,
+        "output_tokens": 255,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.000296,
+      "agents": [
+        {
+          "name": "Interview Coach",
+          "usd": 0.000296,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 1688,
+            "output_tokens": 255,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "get_question",
+            "timing_check",
+            "filler_count",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": {
+        "content": 9,
+        "structure": 9,
+        "authenticity": 8,
+        "timing": 4,
+        "overall": 7
+      },
+      "overall": null,
+      "judges_note": "She tutored girls who couldn\u2019t afford a coach for three years, and wants the title to expand that work. Her checkable commitment is to publish dates for tutoring in two towns in the first month.",
+      "tighter_answer": "The work starts after the crowning. For three years, I tutored girls who couldn\u2019t pay for a coach at the library after school. This title would help me reach more rooms. In the first month, I\u2019d take that tutoring to two towns without a prep class and publish the dates so people can hold me to it.",
+      "drill": "Cut the answer to 60 words or fewer, then rehearse it once aloud against the 25-second clock; keep the tutoring proof and the published-date commitment.",
+      "reviewed": false,
+      "released": true,
+      "auditor_passed": null,
+      "questions": [],
+      "grades": null,
+      "audit": {
+        "problems": [],
+        "hold": false,
+        "tighter_words": 57,
+        "tighter_cap": 60,
+        "tighter_over_cap": false,
+        "timing": {
+          "words": 76,
+          "seconds_used": 31.0,
+          "seconds_limit": 25,
+          "over_by": 6.0,
+          "source": "clock",
+          "estimate_seconds": 33.0
+        },
+        "tools_note": "Scores belong to the interview coach. Do not rescore."
+      },
+      "manual": "short",
+      "practice_set": null,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The interview coach is at the table."
+      ]
+    },
+    "news_brief": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.000956,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 13640,
+        "output_tokens": 605,
+        "cache_read_tokens": 9010,
+        "cache_write_tokens": 4000,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.000956,
+      "agents": [
+        {
+          "name": "News Desk",
+          "usd": 0.000775,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 8951,
+            "output_tokens": 510,
+            "cache_read_tokens": 5127,
+            "cache_write_tokens": 3446,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "get_headlines",
+            "lookup_headline",
+            "lookup_headline",
+            "lookup_headline",
+            "final_result"
+          ]
+        },
+        {
+          "name": "Director",
+          "usd": 0.000181,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 4689,
+            "output_tokens": 95,
+            "cache_read_tokens": 3883,
+            "cache_write_tokens": 554,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "grounding_check",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": null,
+      "overall": null,
+      "judges_note": "The brief stays close to the reported facts and the questions invite your own position without asking you to claim more than the packet supports. For tonight, choose one question and answer in four beats: one fact, who is affected, your view, and what you do not yet know.",
+      "tighter_answer": null,
+      "drill": null,
+      "reviewed": true,
+      "released": true,
+      "auditor_passed": null,
+      "questions": [
+        {
+          "id": "h2899c804",
+          "question": "The headline says COP31 talks may have been torpedoed by oil-producing countries\u2019 interests, a US boycott, and a dispute over finance. What do you think governments should prioritize when climate negotiations stall, and what would you want them to do next?"
+        },
+        {
+          "id": "hf1a5d4d0",
+          "question": "ICE says two Mexican nationals, described as father and daughter, were arrested at Seattle\u2019s airport for allegedly overstaying their visas, and the airport operator said it was outraged. What is your view of this situation, and what should officials consider when enforcing immigration law?"
+        },
+        {
+          "id": "h66d64f43",
+          "question": "Lawyers say Parastoo Ahmadi and four others were reportedly given 74 lashes in Iran after she performed without a hijab. What do you think this case says about freedom of expression, and what should you be careful not to claim without more information?"
+        }
+      ],
+      "grades": null,
+      "audit": {
+        "problems": [],
+        "hold": false,
+        "unknown_ids": []
+      },
+      "manual": null,
+      "practice_set": false,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The news desk is reading the wires.",
+        "The director is checking the headlines against the note."
+      ]
+    },
+    "news_grade": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.001044,
+      "usage": {
+        "requests": 5,
+        "input_tokens": 14809,
+        "output_tokens": 670,
+        "cache_read_tokens": 9797,
+        "cache_write_tokens": 4382,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.001044,
+      "agents": [
+        {
+          "name": "News Desk",
+          "usd": 0.000855,
+          "usage": {
+            "requests": 3,
+            "input_tokens": 10097,
+            "output_tokens": 560,
+            "cache_read_tokens": 5891,
+            "cache_write_tokens": 3828,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "get_headlines",
+            "lookup_headline",
+            "lookup_headline",
+            "lookup_headline",
+            "final_result"
+          ]
+        },
+        {
+          "name": "Director",
+          "usd": 0.000189,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 4712,
+            "output_tokens": 110,
+            "cache_read_tokens": 3906,
+            "cache_write_tokens": 554,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "grounding_check",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": null,
+      "overall": null,
+      "judges_note": "The audit is clean. Across all three answers, you gave no packet fact and no clear position; \u201cspread awareness\u201d and \u201cbe a voice for the voiceless\u201d need a concrete priority or action. Tonight, choose one headline and say its reported fact, your view, and one step you would take\u2014without going beyond what the report establishes.",
+      "tighter_answer": null,
+      "drill": null,
+      "reviewed": true,
+      "released": true,
+      "auditor_passed": null,
+      "questions": [],
+      "grades": [
+        {
+          "headline_id": "h2899c804",
+          "score": 2,
+          "used_a_fact": false,
+          "note": "You gave no fact from the packet and no position on what governments should prioritize or do next. \u201cSpread awareness\u201d and \u201cbe a voice for the voiceless\u201d are vague; name a concrete priority and an action you would take, without claiming more than the headline says.",
+          "tighter_answer": "The headline says oil-producing countries\u2019 interests, a US boycott and a finance dispute may have torpedoed climate talks. [Your position on what governments should prioritize]. As a titleholder, I would [a specific next step]. I would not claim to know more about the negotiations than this report provides."
+        },
+        {
+          "headline_id": "hf1a5d4d0",
+          "score": 2,
+          "used_a_fact": false,
+          "note": "You did not include a packet fact or state your view about enforcement. \u201cSpread awareness\u201d does not tell a judge what officials should consider. The packet says ICE described the two Mexican nationals as father and daughter and said they allegedly overstayed their visas; preserve \u201callegedly\u201d and do not assume details beyond that.",
+          "tighter_answer": "ICE said two Mexican nationals, described as father and daughter, were arrested for allegedly overstaying their visas, and the airport operator said it was outraged. [Your view on what officials should consider]. I would want enforcement to be [your principle], while being careful not to assume facts beyond what has been reported."
+        },
+        {
+          "headline_id": "h66d64f43",
+          "score": 2,
+          "used_a_fact": false,
+          "note": "You gave no fact from the packet and no view on freedom of expression or limit on what you can claim. The packet says lawyers reported that Parastoo Ahmadi, three musicians and a producer were given 74 lashes in Qom; keep the attribution and reported status clear.",
+          "tighter_answer": "Lawyers say Parastoo Ahmadi, three musicians and a producer were reportedly given 74 lashes in Qom after she performed without a hijab. [Your view on freedom of expression]. I would be careful not to claim more about the case or the people involved than this report establishes."
+        }
+      ],
+      "audit": {
+        "problems": [],
+        "hold": false
+      },
+      "manual": null,
+      "practice_set": false,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The news desk is grading against the headlines.",
+        "The director is checking the grades."
+      ]
+    },
+    "runway": {
+      "blocked": null,
+      "message": "",
+      "usd": 0.000381,
+      "usage": {
+        "requests": 2,
+        "input_tokens": 4445,
+        "output_tokens": 122,
+        "cache_read_tokens": 1990,
+        "cache_write_tokens": 2203,
+        "model": "gpt-6-luna"
+      },
+      "computed_usd": 0.000381,
+      "agents": [
+        {
+          "name": "Runway Coach",
+          "usd": 0.000381,
+          "usage": {
+            "requests": 2,
+            "input_tokens": 4445,
+            "output_tokens": 122,
+            "cache_read_tokens": 1990,
+            "cache_write_tokens": 2203,
+            "model": "gpt-6-luna"
+          },
+          "tools": [
+            "read_metrics",
+            "final_result"
+          ]
+        }
+      ],
+      "scores": null,
+      "overall": 6,
+      "judges_note": "Head dropped on 22% of frames; the target is under 15%. Shoulders dipped to 9.1 degrees on the turn; the target is under 8 degrees. Walk one short hallway pass, keeping your head level; at the end, pivot once with your shoulders level. On the pivot, keep your shoulders level through the turn to bring the dip under 8 degrees.",
+      "tighter_answer": null,
+      "drill": "Walk one short hallway pass, keeping your head level; at the end, pivot once with your shoulders level.",
+      "reviewed": null,
+      "released": null,
+      "auditor_passed": true,
+      "questions": [],
+      "grades": null,
+      "audit": {
+        "ok": true,
+        "problem": ""
+      },
+      "manual": null,
+      "practice_set": null,
+      "error": false,
+      "error_message": "",
+      "statuses": [
+        "The runway coach is reading the measurements."
+      ]
+    },
+    "injection": {
+      "allow": false,
+      "kind": "injection",
+      "usd": 0,
+      "message": "That message tried to give the coach new instructions. Call Time ignored it and did not score it. Write the answer you would actually say on stage."
+    },
+    "diet": {
+      "allow": false,
+      "kind": "body",
+      "usd": 0,
+      "message": "Call Time does not coach bodies, diets, or measurements. It coaches the clock, the point you are making, and the line of the walk. Ask that instead."
+    },
+    "budget": {
+      "blocked": true,
+      "kind": "budget",
+      "message": "This session has used its $0.75 rehearsal budget, so the coaches have stopped. The cap is what keeps a bug, or a pasted loop, from spending the key.",
+      "spend": {
+        "session_usd": 0.75,
+        "session_limit": 0.75,
+        "daily_usd": 0.0,
+        "daily_limit": 5.0,
+        "hour_runs": 0,
+        "hour_limit": 12,
+        "model": "gpt-6-luna"
+      },
+      "usd": 0.0
+    },
+    "walk_auditor": {
+      "input": "You looked nervous and your smile dropped on the turn. You should lose weight before gown. Your shoulders were at 40 degrees.",
+      "audit": {
+        "ok": false,
+        "problem": "unmeasured claim: lose weight"
+      },
+      "released": "Evening gown take. The camera measured this, and only this. The head dropped on 22% of frames, against this take's own starting line. The target is under 15%. On the turn, the shoulders dipped to 9.1 degrees. The target is to stay under 8 degrees through the pivot. Drill the flagged piece once, on the beat, and record again.",
+      "sample_flags": [
+        {
+          "code": "head",
+          "detail": "The head dropped on 22% of frames, against this take's own starting line. The target is under 15%."
+        },
+        {
+          "code": "turn_dip",
+          "detail": "On the turn, the shoulders dipped to 9.1 degrees. The target is to stay under 8 degrees through the pivot."
+        }
+      ]
+    }
+  }
+}

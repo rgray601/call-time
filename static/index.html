@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call Time</title>
+  <link rel="icon" href="/static/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,620&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@360;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <p class="kicker">Call time</p>
+      <h1>The rehearsal before the room.</h1>
+      <p>This is for contestants 18 and older. It coaches the clock, tonight’s news, and the line of the walk. It does not coach your body, and it does not coach minors.</p>
+      <button id="enter" class="primary" type="button">I am 18 or older. Open the room.</button>
+    </div>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <header class="top">
+      <div>
+        <p class="kicker">Call time</p>
+        <h1>Rehearsal for the night you cannot hire a coach.</h1>
+      </div>
+      <div class="meter" id="meter">
+        <span class="kicker">This session</span>
+        <strong id="meter-usd">$0.0000</strong>
+        <span id="meter-cap">of $0.75 · gpt-6-luna</span>
+      </div>
+    </header>
+
+    <p id="key-banner" class="banner" hidden>The coaches need an OPENAI_API_KEY in this folder, or in the folder above it. You can still draw a question, load the wires, and measure a walk.</p>
+    <p id="status" class="status" role="status"></p>
+
+    <nav class="rooms" aria-label="Rehearsal rooms">
+      <button type="button" class="room-tab is-on" data-room="interview">On-stage</button>
+      <button type="button" class="room-tab" data-room="news">News desk</button>
+      <button type="button" class="room-tab" data-room="runway">Runway</button>
+      <button type="button" class="room-tab" data-room="backstage">Backstage</button>
+    </nav>
+
+    <section id="interview" class="room">
+      <div class="layout">
+        <div class="panel">
+          <div class="row">
+            <label>Clock
+              <select id="fmt">
+                <option value="onstage">On-stage · 25 seconds</option>
+                <option value="final">Final question · 30 seconds</option>
+                <option value="private">Private interview · 90 seconds</option>
+              </select>
+            </label>
+            <label>Lane
+              <select id="lane">
+                <option value="title">Why you</option>
+                <option value="platform">Platform</option>
+                <option value="personal">Personal</option>
+                <option value="hypothetical">A hard room</option>
+                <option value="current">In the news</option>
+                <option value="any">Surprise me</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <button type="button" id="draw" class="ghost">Draw a question</button>
+            <button type="button" id="speak" class="ghost">Hear it</button>
+            <button type="button" id="load-sample" class="ghost">Load the sample</button>
+          </div>
+          <p id="q-kicker" class="kicker">No question yet</p>
+          <h2 id="q-text">Draw a question, or load the sample the teaching staff can run.</h2>
+          <p id="q-listen" class="muted"></p>
+          <div class="clock-row">
+            <div>
+              <div id="clock" class="clock">0.0</div>
+              <p id="clock-note" class="muted">Start the clock when you start speaking.</p>
+            </div>
+            <div class="stack">
+              <button type="button" id="clock-start" class="primary">Start the clock</button>
+              <button type="button" id="mic" class="ghost">Speak the answer</button>
+            </div>
+          </div>
+          <label class="block" for="answer">Your answer
+            <textarea id="answer" rows="7" maxlength="1500" placeholder="Say it the way you would say it out loud. Then you can clean a word."></textarea>
+          </label>
+          <button type="button" id="ask-interview" class="primary">Ask the coach</button>
+        </div>
+        <div class="panel result" id="interview-result" aria-live="polite">
+          <p class="kicker">Director’s note</p>
+          <p class="muted">The interview coach drafts. The director is the voice you hear. The receipt under the note is the real token bill for this rehearsal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="room" hidden>
+      <div class="layout">
+        <div class="panel">
+          <p class="kicker">Wires</p>
+          <h2>What a judge might ask about tonight.</h2>
+          <p class="muted">Headlines come from BBC and NPR. The desk cannot open a link you paste, and it is not allowed to invent a story when the wires are down.</p>
+          <div class="row">
+            <button type="button" id="load-wires" class="ghost">Load the wires</button>
+            <button type="button" id="write-questions" class="primary">Write judge questions</button>
+          </div>
+          <div id="wires" class="wires"></div>
+        </div>
+        <div class="panel result" id="news-result" aria-live="polite">
+          <p class="kicker">Brief</p>
+          <p class="muted">Questions show up here, with a box under each one. A vague sample answer is available on purpose, so you can see the desk ask for a fact.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="runway" class="room" hidden>
+      <div class="layout">
+        <div class="panel">
+          <p class="kicker">The line</p>
+          <h2>Twelve seconds. Shoulders, head, pace, turn.</h2>
+          <p class="muted">The video stays in this browser. Call Time receives numbers, not a picture. This does not score your body.</p>
+          <div class="row">
+            <label>Walk
+              <select id="walk-style">
+                <option value="evening_gown">Evening gown · about 1 step a second</option>
+                <option value="opening_number">Opening number · a little quicker</option>
+              </select>
+            </label>
+          </div>
+          <div class="stage">
+            <video id="video" playsinline muted></video>
+            <canvas id="overlay"></canvas>
+            <p id="stage-empty">Camera is off. You can still score the sample walk.</p>
+          </div>
+          <div class="row">
+            <button type="button" id="camera" class="ghost">Turn the camera on</button>
+            <button type="button" id="record" class="primary" disabled>Record 12 seconds</button>
+            <button type="button" id="sample-walk" class="ghost">Use the sample walk</button>
+          </div>
+          <div id="walk-metrics"></div>
+          <button type="button" id="ask-walk" class="primary" disabled>Ask the runway coach</button>
+        </div>
+        <div class="panel result" id="walk-result" aria-live="polite">
+          <p class="kicker">Runway coach</p>
+          <p class="muted">A Python auditor checks the note. If the coach mentions a smile, a weight, or a number the camera did not measure, the note is replaced.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="backstage" class="room" hidden>
+      <div class="layout">
+        <div class="panel">
+          <p class="kicker">Staff</p>
+          <h2>Who speaks, and who only drafts.</h2>
+          <ol class="staff">
+            <li><strong>You pick the room.</strong> On-stage, news, or runway. The app does not spend a model call to decide that.</li>
+            <li><strong>One coach drafts,</strong> and only with the tools in that room: the question book and the clock, the wire packet, or the measurements.</li>
+            <li><strong>The director releases interview and news.</strong> A second model call. It can tighten a sentence. It cannot invent a score or a headline.</li>
+            <li><strong>The runway auditor is not a model.</strong> Invented measurements are a math problem. A checker is cheaper and stricter than another prose pass.</li>
+          </ol>
+          <div class="flow" aria-hidden="true">
+            <span>Contestant</span>
+            <span class="arrow">→</span>
+            <span>Coach + tools</span>
+            <span class="arrow">→</span>
+            <span>Director or auditor</span>
+            <span class="arrow">→</span>
+            <span>The note</span>
+          </div>
+          <h3>Safety checks</h3>
+          <p class="muted">These hit the same locks as a real rehearsal. The injection and the diet request never call the model.</p>
+          <div class="row">
+            <button type="button" id="safe-injection" class="ghost">Try a prompt injection</button>
+            <button type="button" id="safe-body" class="ghost">Ask for a diet</button>
+            <button type="button" id="safe-budget" class="ghost">Trip the budget lock</button>
+            <button type="button" id="safe-walk" class="ghost">Poison a walk note</button>
+          </div>
+          <div id="safety-log" class="safety-log"></div>
+        </div>
+        <div class="panel result" id="trace">
+          <p class="kicker">Last rehearsal</p>
+          <p class="muted">Tool calls, both drafts, and the receipt land here after you run a room.</p>
+        </div>
+      </div>
+      <p class="foot">Regina Gray · MGT 409E · Miss Wisconsin USA 2018 · Miss Supranational USA 2019</p>
+    </section>
+  </div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

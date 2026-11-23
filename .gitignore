@@ -1,0 +1,11 @@
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+.python-version
+output/*
+!output/.gitkeep
+!output/measurements.json
+.DS_Store
+*.log
