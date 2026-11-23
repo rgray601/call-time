@@ -517,7 +517,7 @@ function drawPose(landmarks) {
   canvas.width = video.videoWidth || 640;
   canvas.height = video.videoHeight || 480;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = "#e4c79a";
+  ctx.strokeStyle = "#8C2A64";
   ctx.lineWidth = 3;
   const xy = (i) => {
     const p = landmarks[i];
